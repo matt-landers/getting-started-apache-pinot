@@ -36,6 +36,10 @@
     {
       "name": "type",
       "dataType": "STRING"
+    },
+    {
+      "name": "metaJson",
+      "dataType": "STRING"
     }
   ],
   "dateTimeFieldSpecs": [

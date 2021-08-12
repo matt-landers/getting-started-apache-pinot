@@ -1,9 +1,9 @@
 var EventSource = require("eventsource");
 var fs = require("fs");
 var path = require("path");
-var url = "https://stream.wikimedia.org/v2/stream/recentchange";
-
 const { Kafka } = require("kafkajs");
+
+var url = "https://stream.wikimedia.org/v2/stream/recentchange";
 
 const kafka = new Kafka({
   clientId: "wikievents",
@@ -39,19 +39,7 @@ function startEvents() {
       messages: [
         {
           key: data.meta.id,
-          value: JSON.stringify({
-            id: data.meta.id,
-            wiki: data.wiki,
-            user: data.user,
-            title: data.title,
-            comment: data.comment,
-            stream: data.meta.stream,
-            domain: data.meta.domain,
-            topic: data.meta.topic,
-            type: data.type,
-            bot: data.bot,
-            timestamp: data.timestamp,
-          }),
+          value: event.data,
         },
       ],
     });
