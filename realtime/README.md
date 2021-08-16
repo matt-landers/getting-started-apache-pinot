@@ -6,3 +6,18 @@ In this example, we're going to ingest events into Apache Pinot from the [Wikipe
 ⭐️ Create a Real-time Table  
 ⭐️ Send events to Pinot through Apache Kafka  
 🚀 Query the Events in Real-time
+
+# Guide
+
+Install Node and npm:
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+apt install nodejs
+```
+
+Install vim:
+
+```bash
+apt install vim
+```
