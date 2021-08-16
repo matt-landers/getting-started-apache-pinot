@@ -7,7 +7,7 @@ var url = "https://stream.wikimedia.org/v2/stream/recentchange";
 
 const kafka = new Kafka({
   clientId: "wikievents",
-  brokers: ["localhost:19092"],
+  brokers: ["localhost:9092"],
 });
 
 const producer = kafka.producer();
