@@ -1,39 +1,19 @@
 # Getting Started with Apache Pinot
 
-1. Review the different components of Pinot
-1. Create a Dockerfile
-1. Start a Pinot Cluster
-1. Create a Schema and Table
-1. Ingest Sample Data into Table
-1. Query Data from Table
+This repo contains the code used in the [YouTube Getting Started series for Apache Pinot](https://www.youtube.com/watch?v=9B6MCv0uC1s&list=PLihIrF0tCXdeimVCZwuejXb7FkjsyN9_k).
 
-# Anatomy of Apache Pinot
+## What is Apache Pinot?
 
-## Tables
+Apache Pinot is a real-time OLAP database. It's low query latency and real-time data ingestion are ideal for use cases that target end users where the user experience is vital.
 
-⭐️Consist of many Segments that are distributed across n Servers  
-⭐️Segments can be replicated for fault tolerance  
-⭐️Queries are performed on Tables  
-⭐️Tables implement a Schema  
-⭐️Can be Offline (loaded via batch processing)  
-⭐️Can be Real-time (ingest via real-time events like Kafka)
+## Walkthroughs
 
-## Apache Zookeeper
+- [Getting Started with Apache Pinot](first-cluster) - setup your first cluster!
+- [Real-time Tables](realtime) - stream events from Wikipedia's Event Platform into Pinot
 
-⭐️Metadata service that acts as a distributed filesystem to track cluster state and configuration  
-⭐️Apache Helix writes to Zookeeper
+# Get Involved
 
-## Controllers
-
-⭐️Maintains cluster state with the help of Apache Zookeeper for configuration/metadata and Apache Helix for cluster management  
-⭐️Provides endpoints for the REST API, segment uploads, and the Pinot Data Explorer (UI)
-
-## Brokers
-
-⭐️Provides query routing and merging of the results provided by each Server  
-⭐️Maintains the query routing table which tracks what Servers host particular segments
-
-## Servers
-
-⭐️Host Segments and Indexes  
-⭐️Execute queries provided by Brokers on Segments
+⭐️ Follow the [Apache Pinot GitHub Repo](https://github.com/apache/pinot)  
+💬 Join the [Apache Pinot Slack](https://pinot.apache.org/)  
+📧 Subscribe to the [Official Newsletter](https://community.startree.ai/pinotemailsignup)  
+🎬 Subscribe to our [YouTube Channel](https://www.youtube.com/channel/UCHTiKyGonqyMhXBd3uTpu0g)
